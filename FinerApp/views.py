@@ -178,7 +178,7 @@ def eliminar_concepto(request,concepto_id):
    concepto = Concepto.objects.get(id=concepto_id)
    producto =  concepto.producto_id
    
-   productoid = concepto.producto_id.empresa
+   productoid = producto.id
    cvuTemp = producto.c_v_u
    producto.c_v_u = cvuTemp - concepto.costo_variable
    producto.save()
