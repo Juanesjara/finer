@@ -19,9 +19,7 @@ def gestion_producto(request,empresa_id=1):
          c_v_U = form.cleaned_data['c_v_u']
          
          if tipoEmpresa == "productor":
-            print(Concepto.objects.values_list("costo_variable", flat=True), "xd")
-            c_v_U = 6
-         print(Concepto.objects.values_list("costo_variable", flat=True), "aaaaaaaaaaaa")   
+            c_v_U = 0
          producto = Producto.objects.create( 
          empresa_id = Empresa.objects.get(id=empresa_id),
          nombre = form.cleaned_data['nombre'],
