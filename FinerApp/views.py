@@ -126,7 +126,8 @@ def añadir_concepto(request, producto_id):
         
          producto.c_v_u = cvuTemp + concepto.costo_variable
          producto.save()
-      
+      else:
+         print(formConcepto.errors)
       
       
 
